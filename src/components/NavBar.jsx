@@ -23,6 +23,11 @@ const NavBar = () => {
 
         },
         {
+            title: 'Course',
+            path: '/course'
+
+        },
+        {
             title: 'contact',
             path: '/contact'
 
