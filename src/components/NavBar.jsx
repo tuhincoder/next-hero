@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 
 const NavBar = () => {
     const pathName = usePathname()
+    console.log(pathName);
     const router = useRouter()
     const NavItem = [
         {
@@ -37,6 +38,15 @@ const NavBar = () => {
     const handleGoToLoginPage = () => {
         router.push('/login')
     }
+
+    if (pathName.includes('dashboard')) {
+        return (
+            <div className="bg-red-700 p-5">
+                dashboard layout
+            </div>
+        )
+    }
+
     return (
         <nav className="flex justify-between bg-gray-600 text-white px-10 py-5">
             <h1 className="text-2xl">Next <span className="text-cyan-300">Hero</span></h1>
